@@ -99,6 +99,24 @@ public class DrawDemo
     }
     
     /**
+     * Codifica un método en la clase DrawDemo 
+     * llamado drawSpiral que dibuje una espiral 
+     * como la que se puede ver en el siguiente enlace:
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.BLACK);
+        int seg = 10;
+        for(int i =0; i< 50; i++)
+        {
+            pen.move(seg);
+            pen.turn(90);
+            seg=seg+5;
+        }
+    }
+    
+    /**
      * Codifica un método en la clase DrawDemo llamado drawPolygon(int n)
      * que permita dibujar un polígono regular con n lados, es decir, 
      * si n vale 3, será un triángulo, si vale 4 será un cuadrado, etc. 
