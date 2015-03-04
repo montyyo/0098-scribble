@@ -1,6 +1,6 @@
 import java.awt.Color;
 import java.util.Random;
-
+import java.awt.*;
 /**
  * Class DrawDemo - provides some short demonstrations showing how to use the 
  * Pen class to create various drawings.
@@ -24,6 +24,8 @@ public class DrawDemo
         random = new Random();
     }
 
+   
+    
     /**
      * Draw a square on the screen.
      */
@@ -35,6 +37,8 @@ public class DrawDemo
         square(pen);
     }
 
+    
+    
     /**
      * Draw a wheel made of many squares.
      */
@@ -60,6 +64,22 @@ public class DrawDemo
         }
     }
 
+     /**
+     * DRAW A TRIANGLE ON SCREEN
+     */
+    public void drawTriangle(int y,int x)
+    {
+        Pen pen = new Pen(x,y,myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int i =0; i< 3; i++)
+        {
+            pen.move(100);
+            pen.turn(120);
+        }
+       
+    }
+    
     /**
      * Draw some random squiggles on the screen, in random colors.
      */
