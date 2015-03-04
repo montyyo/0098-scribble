@@ -81,6 +81,24 @@ public class DrawDemo
     }
     
     /**
+     * Codifica un método en la clase DrawDemo llamado drawPentagon que permita dibujar
+     * un pentágono verde.
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int i =0; i< 5; i++)
+        {
+            pen.move(100);
+            pen.turn(-72);
+        }
+        
+    
+    }
+    
+    /**
      * Draw some random squiggles on the screen, in random colors.
      */
     public void colorScribble()
