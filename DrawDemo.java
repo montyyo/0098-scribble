@@ -99,6 +99,24 @@ public class DrawDemo
     }
     
     /**
+     * Codifica un método en la clase DrawDemo llamado drawPolygon(int n)
+     * que permita dibujar un polígono regular con n lados, es decir, 
+     * si n vale 3, será un triángulo, si vale 4 será un cuadrado, etc. 
+     */
+    public void drawPolygon(int n)
+    {
+        int angle=360/n;
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int i =0; i< n; i++)
+        {
+            pen.move(100);
+            pen.turn(angle);
+        }
+    }
+    
+    /**
      * Draw some random squiggles on the screen, in random colors.
      */
     public void colorScribble()
